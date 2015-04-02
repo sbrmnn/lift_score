@@ -131,12 +131,14 @@
     <div class="row">
 
       <div class="col-lg-12 col-centered">
-        <% flash.each do |type, message| %>
-          <ul>
-             <% message.each do |key,value| %>
-                <li><%= "#{key.to_s.capitalize.gsub('_', ' ')}  #{value.first.gsub('_', ' ')}" %> </li>
-             <% end %>
-          </ul>
+        <% if flash %>
+          <% flash.each do |type, message| %>
+            <ul>
+               <% message.each do |key,value| %>
+                  <li><%= "#{key.to_s.capitalize.gsub('_', ' ')}  #{value.first.gsub('_', ' ')}" %> </li>
+               <% end %>
+            </ul>
+          <% end %>
         <% end %>
         <div class="well bs-component">
           <%= form_for @lead, html: {class: "form-horizontal"} ,:url => { :action => "create" }  do |f|  %>

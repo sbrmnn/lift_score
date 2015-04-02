@@ -1,5 +1,8 @@
 class LeadsController < ApplicationController
 
+  def index
+  end
+
   def new
     @lead = Lead.new
   end
@@ -7,11 +10,9 @@ class LeadsController < ApplicationController
   def create
     @lead = Lead.new(lead_params)
     if @lead.save
-      flash[:success] = "Welcome to the Sample App!"
-      redirect_to @lead
+      redirect_to '/leads'
     else
       flash[:error] = @lead.errors
-      flash.keep(:error)
       redirect_to '/#freeConsultation'
     end
   end
