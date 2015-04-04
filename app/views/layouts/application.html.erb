@@ -3,14 +3,7 @@
 <head>
   <title>Lift Score</title>
   <meta charset="utf-8">
-  <%= stylesheet_link_tag    'application', media: 'all'%>
-  <%= javascript_include_tag 'application' %>
 
-  <% if controller_name == "leads" && action_name == "index"%>
-      <script src="/assets/facebook.js"></script>
-      <noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?ev=6020214137608&amp;cd[value]=0.01&amp;cd[currency]=USD&amp;noscript=1" /></noscript>
-
-  <% end %>
   <%= csrf_meta_tags %>
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,4 +21,11 @@
 <%= yield %>
 
 </body>
+<%= stylesheet_link_tag    'application', media: 'all'%>
+<%= javascript_include_tag 'application' %>
+<% if controller_name == "leads" && action_name == "index"%>
+    <script src="/assets/facebook.js"></script>
+    <noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?ev=6020214137608&amp;cd[value]=0.01&amp;cd[currency]=USD&amp;noscript=1" /></noscript>
+
+<% end %>
 </html>
