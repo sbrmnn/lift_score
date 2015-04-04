@@ -36,6 +36,18 @@ Rails.application.configure do
   # Raises helpful error messages.
   config.assets.raise_runtime_errors = true
 
+  config.cache_classes = true
+
+  config.serve_static_assets = true
+
+  config.assets.compress = true
+
+  config.assets.digest = true
+
+  config.assets.js_compressor = :closure
+  config.assets.css_compressor = :sass
+
+
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 end
