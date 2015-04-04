@@ -3,7 +3,7 @@
 <head>
   <title>Lift Score</title>
   <meta charset="utf-8">
-
+  <%= stylesheet_link_tag    'application', media: 'all'%>
   <%= csrf_meta_tags %>
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,7 +21,7 @@
 <%= yield %>
 
 </body>
-<%= stylesheet_link_tag    'application', media: 'all'%>
+
 <%= javascript_include_tag 'application' %>
 <% if controller_name == "leads" && action_name == "index"%>
     <script src="/assets/facebook.js"></script>
