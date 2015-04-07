@@ -8,7 +8,7 @@ class Lead < ActiveRecord::Base
 
 
   def send_mail
-    email_msg = "Hi Arun, Here is your lead #{self.name} #{self.email} #{self.phone_number}"
+    email_msg = "Hi Arun,\n Here is your lead #{self.name} #{self.email} #{self.phone_number}"
     ActionMailer::Base.mail(:from => "noreply@liftscore.com", :to => ENV["MYEMAIL"], :subject => "New Lead", :body => email_msg).deliver
   end
 end
