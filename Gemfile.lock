@@ -56,6 +56,8 @@ GEM
       i18n_data (~> 0.6.0)
     currencies (0.4.2)
     debug_inspector (0.0.2)
+    domain_name (0.5.23)
+      unf (>= 0.0.5, < 1.0.0)
     email_validator (1.5.0)
       activemodel
     erubis (2.7.0)
@@ -67,6 +69,8 @@ GEM
       activesupport (>= 3.2.13)
       rack (>= 1.4.5)
     hike (1.2.3)
+    http-cookie (1.0.2)
+      domain_name (~> 0.5)
     i18n (0.7.0)
     i18n_data (0.6.3)
     jbuilder (2.2.12)
@@ -85,6 +89,7 @@ GEM
     mini_portile (0.6.2)
     minitest (5.5.1)
     multi_json (1.11.0)
+    netrc (0.10.3)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
     pg (0.17.1)
@@ -130,6 +135,10 @@ GEM
     rake (10.4.2)
     rdoc (4.2.0)
       json (~> 1.4)
+    rest-client (1.8.0)
+      http-cookie (>= 1.0.2, < 2.0)
+      mime-types (>= 1.16, < 3.0)
+      netrc (~> 0.7)
     sass (3.4.13)
     sass-rails (5.0.3)
       railties (>= 4.0.0, < 5.0)
@@ -140,6 +149,10 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
+    sendgrid-ruby (0.0.3)
+      rest-client
+      smtpapi
+    smtpapi (0.1.0)
     spring (1.3.3)
     sprockets (2.12.3)
       hike (~> 1.2)
@@ -161,6 +174,9 @@ GEM
     uglifier (2.7.1)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.6)
     web-console (2.1.2)
       activemodel (>= 4.0)
       binding_of_caller (>= 0.7.2)
@@ -185,6 +201,7 @@ DEPENDENCIES
   rails_12factor
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
+  sendgrid-ruby
   spring
   sqlite3
   turbolinks
