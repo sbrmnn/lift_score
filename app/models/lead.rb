@@ -1,4 +1,3 @@
-require 'sendgrid-ruby'
 class Lead < ActiveRecord::Base
   phony_normalize :phone_number, :default_country_code => 'US'
   validates_presence_of :name
