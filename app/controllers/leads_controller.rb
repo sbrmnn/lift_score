@@ -5,6 +5,7 @@ class LeadsController < ApplicationController
 
   def new
     @lead = Lead.new
+    @lead_count_notification = "#{1000 + Lead.count} people have signed up!"
   end
 
   def create
