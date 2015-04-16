@@ -37,6 +37,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'email_validator'
 
+gem 'mechanize', '~> 2.7.3'
+
 gem 'phony_rails'
 
 gem 'closure-compiler'
