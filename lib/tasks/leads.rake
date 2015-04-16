@@ -2,7 +2,7 @@ require 'mechanize'
 namespace :leads do
   desc "sends leads to aquarian"
   task send_to_aquarian: :environment do
-    Lead.all.where(:lead_sent=>false) each do |obj|
+    Lead.all.where(:lead_sent=>false).each do |obj|
       mechanize = Mechanize.new
       landing_page = mechanize.get('https://creditstatusnow.com/Affiliates/Summary.aspx')
       login_form = landing_page.forms.first
