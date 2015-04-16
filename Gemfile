@@ -3,6 +3,8 @@ ruby "2.1.2"
 
 gem 'puma'
 
+gem "strip_attributes"
+
 gem 'rails_12factor'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
